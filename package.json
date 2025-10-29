@@ -58,15 +58,17 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "peerDependencies": {
+    "vite": "catalog:cli"
+  },
   "dependencies": {
     "@babel/generator": "catalog:inlined",
     "@babel/types": "catalog:inlined",
-    "@vue/compiler-sfc": "catalog:inlined",
+    "@vue/compiler-sfc": "3.4.21",
     "ast-kit": "catalog:inlined",
     "chokidar": "catalog:inlined",
     "jsonc-parser": "catalog:inlined",
-    "magic-string-ast": "catalog:inlined",
-    "vue": "catalog:inlined"
+    "magic-string-ast": "catalog:inlined"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
@@ -82,7 +84,6 @@
     "tsdown": "catalog:cli",
     "tsx": "catalog:cli",
     "typescript": "catalog:cli",
-    "vite": "catalog:cli",
     "vitest": "catalog:testing",
     "vitest-package-exports": "catalog:testing"
   },

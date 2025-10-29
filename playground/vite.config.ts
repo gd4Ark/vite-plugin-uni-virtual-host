@@ -18,8 +18,8 @@ export default defineConfig({
     uniPlugin,
     isEnabled && uniVirtualHost({
       ignore: [
-        'src/App.vue',
-        'src/App.ku.vue',
+        'App.vue',
+        'App.ku.vue',
         '**/uni_modules/**',
       ],
     }),

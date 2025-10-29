@@ -15,7 +15,7 @@
 ## 安装
 
 ```bash
-pnpm add vite-plugin-uni-virtual-host -D
+pnpm add -D vite-plugin-uni-virtual-host
 ```
 
 ## 使用
@@ -40,13 +40,7 @@ const isEnabled = process.env.UNI_PLATFORM === 'mp-weixin'
 export default defineConfig({
   plugins: [
     uniPlugin,
-    isEnabled && uniVirtualHost({
-      ignore: [
-        'src/App.vue',
-        'src/App.ku.vue',
-        '**/uni_modules/**',
-      ],
-    }),
+    isEnabled && uniVirtualHost(),
   ].filter(Boolean),
 })
 ```
@@ -70,8 +64,8 @@ defineOptions({
 ```ts
 uniVirtualHost({
   ignore: [
-    '**/App.vue',
-    '**/App.ku.vue',
+    'App.vue',
+    'App.ku.vue',
     '**/uni_modules/**', // 忽略 uni_modules 目录
   ],
 })

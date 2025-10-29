@@ -1,6 +1,6 @@
-import type { SFCBlock, SFCDescriptor } from 'vue/compiler-sfc'
+import type { SFCBlock, SFCDescriptor } from '@vue/compiler-sfc'
+import { parse as parseSfc } from '@vue/compiler-sfc'
 import { babelParse } from 'ast-kit'
-import { parse as parseSfc } from 'vue/compiler-sfc'
 
 type SetupAST = ReturnType<typeof babelParse>
 
