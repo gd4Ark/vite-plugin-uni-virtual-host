@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.17.1",
-  "description": "一个帮助你在 uni-app 项目中自动往组件注入 virtualHost options 的插件",
+  "description": "自动为 uni-app 组件注入 `virtualHost: true` 配置，让微信小程序的组件行为与 App/H5 端保持一致",
   "author": "gd4Ark <gd4ark@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/gd4Ark",

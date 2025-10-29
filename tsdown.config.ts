@@ -5,4 +5,8 @@ export default defineConfig({
     'src/index.ts',
   ],
   dts: true,
+  external: [
+    'fsevents',
+    'vite',
+  ],
 })

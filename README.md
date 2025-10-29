@@ -10,7 +10,7 @@
 - ✅ 支持 `class`、`style`、`id` 等属性透传
 - ✅ 减少跨端开发的心智负担
 
-详细背景请参考：[uni-app 多端组件属性与样式透传行为一致性实践](https://4ark.me/posts/2025-10-28-uni-app-component-props-style-pass-through.md)
+详细背景请参考：[uni-app 多端组件属性与样式透传行为一致性实践](https://4ark.me/posts/2025-10-28-uni-app-component-props-style-pass-through/)
 
 ## 安装
 
