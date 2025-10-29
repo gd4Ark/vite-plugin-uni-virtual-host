@@ -1,0 +1,104 @@
+{
+  "name": "vite-plugin-uni-virtual-host",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.17.1",
+  "description": "一个帮助你在 uni-app 项目中自动往组件注入 virtualHost options 的插件",
+  "author": "gd4Ark <gd4ark@gmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/gd4Ark",
+  "homepage": "https://github.com/gd4Ark/vite-plugin-uni-virtual-host#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gd4Ark/vite-plugin-uni-virtual-host.git"
+  },
+  "bugs": "https://github.com/gd4Ark/vite-plugin-uni-virtual-host/issues",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "uni-app",
+    "miniprogram"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown --format esm --format cjs",
+    "dev": "tsdown --watch --format esm --format cjs",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "prepublishOnly": "nr build",
+    "release": "bumpp",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@babel/generator": "catalog:inlined",
+    "@babel/types": "catalog:inlined",
+    "@vue/compiler-sfc": "catalog:inlined",
+    "ast-kit": "catalog:inlined",
+    "chokidar": "catalog:inlined",
+    "fs-extra": "catalog:inlined",
+    "jsonc-parser": "catalog:inlined",
+    "magic-string-ast": "catalog:inlined",
+    "picomatch": "catalog:inlined",
+    "rsync": "catalog:inlined",
+    "vue": "catalog:inlined"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@antfu/ni": "catalog:cli",
+    "@antfu/utils": "catalog:inlined",
+    "@types/babel__generator": "catalog:types",
+    "@types/fs-extra": "catalog:types",
+    "@types/node": "catalog:types",
+    "@types/rsync": "^0.4.36",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:cli",
+    "lint-staged": "catalog:cli",
+    "simple-git-hooks": "catalog:cli",
+    "tinyexec": "catalog:testing",
+    "tsdown": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "vite": "catalog:cli",
+    "vitest": "catalog:testing",
+    "vitest-package-exports": "catalog:testing",
+    "yaml": "catalog:testing"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "vitest related --run",
+      "eslint --fix"
+    ]
+  }
+}
