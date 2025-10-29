@@ -64,11 +64,8 @@
     "@vue/compiler-sfc": "catalog:inlined",
     "ast-kit": "catalog:inlined",
     "chokidar": "catalog:inlined",
-    "fs-extra": "catalog:inlined",
     "jsonc-parser": "catalog:inlined",
     "magic-string-ast": "catalog:inlined",
-    "picomatch": "catalog:inlined",
-    "rsync": "catalog:inlined",
     "vue": "catalog:inlined"
   },
   "devDependencies": {
@@ -76,9 +73,7 @@
     "@antfu/ni": "catalog:cli",
     "@antfu/utils": "catalog:inlined",
     "@types/babel__generator": "catalog:types",
-    "@types/fs-extra": "catalog:types",
     "@types/node": "catalog:types",
-    "@types/rsync": "^0.4.36",
     "bumpp": "catalog:cli",
     "eslint": "catalog:cli",
     "lint-staged": "catalog:cli",
@@ -89,8 +84,7 @@
     "typescript": "catalog:cli",
     "vite": "catalog:cli",
     "vitest": "catalog:testing",
-    "vitest-package-exports": "catalog:testing",
-    "yaml": "catalog:testing"
+    "vitest-package-exports": "catalog:testing"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
